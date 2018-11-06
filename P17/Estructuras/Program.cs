@@ -9,12 +9,14 @@ namespace Estructuras
             Console.WriteLine("---TIENDA DE APARATOS ELECTRÓNICOS---\n*Nota: Este programa no tiene interacción con el usuario.*\n");
             Console.WriteLine("Hola. Los electrónicos que llegaron a la tienda son los siguientes.");
 
-            Marca[] tienda = new Marca[2];
+            Marca[] tienda = new Marca[2]; //este es un arreglo de estructuras
+            //en las partes siguientes se hacen asignación de valores por defecto
             tienda[0].Tablets = new Tablet[2];
             tienda[1].Tablets = new Tablet[2];
             tienda[0].Celulares = new Celular[2];
             tienda[1].Celulares = new Celular[2];
 
+            //nombre de las marcas
             tienda[0].Nombre = "Samsung";
             tienda[1].Nombre = "Apple";
 
@@ -56,19 +58,23 @@ namespace Estructuras
         }
     }
 
+    //primera estructura
     public struct Marca
-    {
+    { 
+        //esta es una estructura de arreglos (tiene dos) y además cada arreglo es de estructuras, es decir, está anidado también
         public string Nombre;
-        public Tablet [] Tablets;
+        public Tablet [] Tablets; 
         public Celular [] Celulares;
     }
 
+
+    //segunda estructura
     public struct Tablet
     {
         public string Modelo;
         public int Año;
     }
-
+    //tercera estructura
     public struct Celular
     {
         public string Modelo;
