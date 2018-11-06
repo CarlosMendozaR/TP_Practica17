@@ -6,10 +6,14 @@ namespace Estructuras
     {
         static void Main()
         {
-            Console.WriteLine("---TIENDA DE APARATOS ELECTRÓNICOS---\n\n");
-            Console.WriteLine("Hola. Los electrónicos que llegaron a la tienda son los siguientes.\n");
+            Console.WriteLine("---TIENDA DE APARATOS ELECTRÓNICOS---\n");
+            Console.WriteLine("Hola. Los electrónicos que llegaron a la tienda son los siguientes.");
 
             Marca[] tienda = new Marca[2];
+            tienda[0].Tablets = new Tablet[2];
+            tienda[1].Tablets = new Tablet[2];
+            tienda[0].Celulares = new Celular[2];
+            tienda[1].Celulares = new Celular[2];
 
             tienda[0].Nombre = "Samsung";
             tienda[1].Nombre = "Apple";
@@ -36,17 +40,18 @@ namespace Estructuras
 
             for (int a=0; a<tienda.Length; a++)
             {
-                Console.WriteLine("\nMARCA: "+tienda[a].Nombre);
+                Console.WriteLine("\nMARCA: "+tienda[a].Nombre+"\n");
                 for (int b = 0; b < tienda.Length; b++)
                 {
-                    Console.WriteLine("  TABLETS");
-                    Console.WriteLine("    "+b+" "+tienda[a].Tablets[b].Modelo+" - "+tienda[a].Tablets[b].Año);
+                    Console.WriteLine("  TABLET "+(b+1));
+                    Console.WriteLine("    "+tienda[a].Tablets[b].Modelo+" - "+tienda[a].Tablets[b].Año);
                 }
                 for (int c=0; c<tienda.Length; c++)
                 {
-                    Console.WriteLine("  CELULARES");
-                    Console.WriteLine("    "+c+" "+tienda[a].Celulares[c].Modelo+" - "+tienda[a].Celulares[c].Año);
+                    Console.WriteLine("  CELULAR "+(c+1));
+                    Console.WriteLine("    "+tienda[a].Celulares[c].Modelo+" - "+tienda[a].Celulares[c].Año);
                 }
+                Console.WriteLine("\n");
             }
         }
     }
