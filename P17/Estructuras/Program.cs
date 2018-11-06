@@ -6,7 +6,7 @@ namespace Estructuras
     {
         static void Main()
         {
-            Console.WriteLine("---TIENDA DE APARATOS ELECTRÓNICOS---\n");
+            Console.WriteLine("---TIENDA DE APARATOS ELECTRÓNICOS---\n*Nota: Este programa no tiene interacción con el usuario.*\n");
             Console.WriteLine("Hola. Los electrónicos que llegaron a la tienda son los siguientes.");
 
             Marca[] tienda = new Marca[2];
